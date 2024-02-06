@@ -33,7 +33,7 @@ void scan_bus( int bus ) {
 
                 if (ioctl( file, I2C_SLAVE, address ) < 0) {
                         /* ERROR HANDLING; you can check errno to see what went wrong */
-                        printf( "!! " );
+                        printf( "%02x*", address );
                 } else {
 
                         if (read(file, buffer, 1) != 1) {
