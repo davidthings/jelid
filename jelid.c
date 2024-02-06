@@ -24,7 +24,7 @@ void scan_bus( int bus ) {
         snprintf(filename, 19, "/dev/i2c-%d", bus);
         file = open(filename, O_RDWR);
         if (file < 0) {
-                printf( " Failed to open\n" );  
+                printf( " Failed to open\n\n" );  
         }
 
         char* buffer[ 10 ];
