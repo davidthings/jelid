@@ -2,7 +2,9 @@
 
 Tiny utility to aid in the identification of JELOS handhelds
 
-You can use `CMake` to build it
+This will usually be either shared in binary form or cross compiled by Jelos.
+
+Or if you have a dev environment on the device, you can use `CMake` to build it
 
 ```
 mkdir build
@@ -11,7 +13,7 @@ cmake ..
 ./jelid
 ```
 
-Or if you have a dev environment on the device, you can just `gcc` it
+Or can just `gcc` it
 
 ```
 gcc jelid.c -o jelid
