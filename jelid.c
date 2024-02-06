@@ -8,15 +8,11 @@
 void scan_bus( int bus );
 
 int main( int c, char** s ) {
-
-
         printf( "JELID \n" );
 
         scan_bus( 0 );
         scan_bus( 2 );
         scan_bus( 5 );
-
-
 }
 
 void scan_bus( int bus ) {
@@ -30,7 +26,6 @@ void scan_bus( int bus ) {
         if (file < 0) {
                 printf( " Failed to open\n" );  
         }
-
 
         char* buffer[ 10 ];
 
@@ -47,15 +42,13 @@ void scan_bus( int bus ) {
                                 printf( "%02x ", address );
                         }
 
-                        if ( ( address + 1 ) % 16 == 0 )
-                                printf( "\n" );
                 }
 
+                if ( ( address + 1 ) % 16 == 0 )
+                        printf( "\n" );
         }
 
         printf( "\n" );
-
-
         close( file );
 }
 
